@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import HomePage from "./HomePage";
 
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
+     <HomePage/>
       </main>
     </>
   );
