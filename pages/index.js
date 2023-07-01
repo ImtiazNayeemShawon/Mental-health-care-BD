@@ -1,7 +1,8 @@
 import Head from "next/head";
 import HomePage from "./HomePage";
-
-
+import Partner from "./Partner";
+import Footer from "./Footer";
+import Achivments from "./Achivments";
 export default function Home() {
   return (
     <>
@@ -12,7 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-     <HomePage/>
+        <HomePage />
+        <Partner />
+        <Achivments />
+        <Footer />
       </main>
     </>
   );

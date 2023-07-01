@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@900&display=swap");
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -26,9 +27,8 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.partnertxt{
+  font-family: "Darker Grotesque", sans-serif;
 }
 
 
