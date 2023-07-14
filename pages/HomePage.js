@@ -28,7 +28,7 @@ export default function HomePage() {
             </p>
             <div className="max-sm:justify-between max-sm:block">
               <button className="line px-10 py-3 rounded-2xl text-gray-50 font-bold mt-10 hover:bg-white duration-200 hover:text-gray-500 max-sm:w-60 ">
-                Explore
+                Donate
               </button>
               <button className=" px-10 py-3 rounded-2xl text-gray-500 shadow-sm bg-white ml-20 font-bold mt-10  hover:bg-gray-500 duration-200 hover:text-white max-sm:ml-0 max-sm:mt-2 max-sm:w-60 ">
                 About us
