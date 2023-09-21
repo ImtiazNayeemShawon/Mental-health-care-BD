@@ -4,9 +4,7 @@ import Logo from "../public/frontlogo.png";
 
 export default function HomePage() {
   return (
-    <div
-    id="Home"
-    className="m-0 bg pb-40">
+    <div id="Home" className="m-0 bg pb-40">
       <div className="mx-10 ">
         <div className="grid grid-cols-2  mt-10 justify-between max-sm:grid-cols-1">
           <div>

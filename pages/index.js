@@ -1,7 +1,7 @@
 import Head from "next/head";
 import HomePage from "./HomePage";
 import Footer from "./Footer";
-import Feature from "./Feature"
+import Feature from "./Feature";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <main>
         <HomePage />
-        <Feature/>
+        <Feature />
         <Footer />
       </main>
     </>
