@@ -4,7 +4,7 @@ import Ntg from "../public/group.png";
 
 export default function OurEvenets() {
   return (
-    <div className="mt-20">
+    <div className="mt-20" id="Events">
       <div>
         <h1 className="uppercase font-semibold mainfont text-lg text-center text-yellow-500">
           Our events
