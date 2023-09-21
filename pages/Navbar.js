@@ -15,6 +15,7 @@ export default function Navbar() {
     <div>
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded   fixed top-0 right-0 left-0">
         <div className="container flex flex-wrap items-right justify-between mx-auto">
+          <a href="/">
           <Image
             src={Logo}
             alt="mhc logo"
@@ -22,6 +23,7 @@ export default function Navbar() {
             height={100}
             className="max-sm:w-40"
           />
+          </a>
           <button
             className="bg-white py-0 px-0 hover:bg-white hidden max-sm:block"
             onClick={Navshow}
@@ -50,6 +52,7 @@ export default function Navbar() {
             <ul className="flex flex-col p-2 font-bold mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-6 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white uppercase text-sm">
               <Link
                 to="Home"
+                
                 duration={500}
                 smooth={true}
                 className="text-blue-700 p-2 text-sm font-bold hover:bg-gray-300 duration-300 rounded cursor-pointer"
@@ -57,12 +60,20 @@ export default function Navbar() {
                 Home
               </Link>
               <Link
-                to="Achievement"
+                to="blogs"
                 duration={500}
                 smooth={true}
                 className="text-blue-700 p-2 font-bold  hover:bg-gray-300 duration-300 rounded cursor-pointer"
               >
-                Achievement
+                Blogs
+              </Link>
+              <Link
+                to="Events"
+                duration={500}
+                smooth={true}
+                className="text-blue-700 p-2 font-bold  hover:bg-gray-300 duration-300 rounded cursor-pointer"
+              >
+                Events
               </Link>
               <Link
                 to="ourworks"
