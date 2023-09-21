@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <div>
-      {(router.pathname = "/dashboard" ? null : <Navbar />)}
+      {(router.pathname = "/dashboard" ? <Navbar /> :null )}
       <Component {...pageProps} />
     </div>
   );
