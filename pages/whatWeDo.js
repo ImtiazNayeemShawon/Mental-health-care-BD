@@ -5,9 +5,9 @@ import Group from "../public/group.png";
 import Volunteer from "../public/volunteer.png";
 import Project from "../public/project.png";
 import Projects from "../public/projects.png";
-import Partner from "../public/partner.png"
+import Partner from "../public/partner.png";
 
-export default function whatWeDo() {
+export default function WhatWeDo() {
   return (
     <div>
       <div className="mt-20">

@@ -5,7 +5,8 @@ import Feature from "./Feature";
 import WhatWeDo from "./whatWeDo";
 import Gallery from "./Gallery";
 import BecomeVolunteer from "./becomeVolunteer";
-import Events from "./OurEvenets"
+import OurEvenets from "./OurEvenets";
+
 export default function Home() {
   return (
     <>
@@ -16,15 +17,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="mx-20 max-sm:mx-4 block">
+      <main className="mx-20 max-sm:mx-4 block">
         <HomePage />
         <Feature />
         <WhatWeDo />
         <Gallery />
-        <Events/>
+        <OurEvenets />
         <BecomeVolunteer />
-      </div>
-      {/* <Footer /> */}
+        <Footer />
+      </main>
     </>
   );
 }

@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import toast from "react-hot-toast";
 
 const AddPost = () => {
   const handleSUbmit = async (e) => {
@@ -7,14 +9,26 @@ const AddPost = () => {
       title: e.target.title.value,
       image: e.target.image.value,
       description: e.target.description.value,
-      date: new Date(),
     };
     console.log(post);
 
-    // add post backend
+    try {
+      const addpost = await fetch("http://localhost:4000/", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(post),
+      });
+
+      if (addpost.ok) {
+        e.target.reset();
+        toast.success("Post Created");
+      }
+      console.log(addpost);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  // title,description,date,picture,
   return (
     <div className="flex items-center h-screen">
       <div className="w-full bg-white mx-5 py-5 rounded-3xl">

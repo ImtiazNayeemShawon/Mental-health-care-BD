@@ -10,7 +10,12 @@ export default function Footer() {
   return (
     <div className="py-4">
       <div>
-        <Image src={Logo} width={200} className="mt-20 block m-auto" />
+        <Image
+          src={Logo}
+          alt="logo"
+          width={200}
+          className="mt-20 block m-auto"
+        />
         <h1 className="text-center font-semibold">
           © 2023 Mental health care. All Rights Reserved.Developed by{" "}
           <a className="font-bold text-blue-700 partnertxt text-xl cursor-pointer">
@@ -19,10 +24,10 @@ export default function Footer() {
           </a>
         </h1>
         <div className="flex justify-around mx-96 mt-5  max-sm:mx-10">
-          <Image src={FB} width={20} />
-          <Image src={Insta} width={20} />
-          <Image src={Linkdin} width={20} />
-          <Image src={Twitter} width={20} />
+          <Image src={FB} alt="Fb" width={20} />
+          <Image src={Insta} alt="Insta" width={20} />
+          <Image src={Linkdin} alt="Linkedin" width={20} />
+          <Image src={Twitter} alt="Twitter" width={20} />
         </div>
         <div className="flex justify-around max-sm:flex-wrap mx-80 font-semibold mt-5 text-green-500 max-sm:mx-2 capitalize">
           <a
@@ -50,7 +55,6 @@ export default function Footer() {
             contact us
           </a>
         </div>
-       
       </div>
     </div>
   );
