@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import toast from "react-hot-toast";
 
 const AddPost = () => {
   const handleSUbmit = async (e) => {
@@ -12,7 +13,7 @@ const AddPost = () => {
     console.log(post);
 
     try {
-      const addpost = await fetch("/api/post", {
+      const addpost = await fetch("http://localhost:4000/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(post),
@@ -20,6 +21,7 @@ const AddPost = () => {
 
       if (addpost.ok) {
         e.target.reset();
+        toast.success("Post Created");
       }
       console.log(addpost);
     } catch (error) {
