@@ -1,29 +1,48 @@
-"use client";
 import React from "react";
 import toast from "react-hot-toast";
 
 const AddPost = () => {
   const handleSUbmit = async (e) => {
     e.preventDefault();
-    const post = {
-      title: e.target.title.value,
-      image: e.target.image.value,
-      description: e.target.description.value,
-    };
-    console.log(post);
 
+    const image = e.target.image.files[0];
+    const formData = new FormData();
+    formData.append("file", image);
+    formData.append("upload_preset", "blog_img");
+
+    // upload image to cloudinary
     try {
-      const addpost = await fetch("http://localhost:4000/", {
+      fetch("https://api.cloudinary.com/v1_1/dfa9rwg3b/image/upload", {
         method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(post),
-      });
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          // main data
+          const post = {
+            title: e.target.title.value,
+            image: data.secure_url,
+            description: e.target.description.value,
+          };
 
-      if (addpost.ok) {
-        e.target.reset();
-        toast.success("Post Created");
-      }
-      console.log(addpost);
+          // save data to databse
+          try {
+            fetch("http://localhost:4000/", {
+              method: "POST",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify(post),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data) {
+                  e.target.reset();
+                  toast.success("Post Created");
+                }
+              });
+          } catch (error) {
+            console.log(error);
+          }
+        });
     } catch (error) {
       console.log(error);
     }
