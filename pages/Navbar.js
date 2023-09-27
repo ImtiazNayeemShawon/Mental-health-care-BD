@@ -13,16 +13,16 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded   fixed top-0 right-0 left-0">
+      <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded   fixed top-0 right-0 left-0 z-50">
         <div className="container flex flex-wrap items-right justify-between mx-auto">
           <a href="/">
-          <Image
-            src={Logo}
-            alt="mhc logo"
-            width={200}
-            height={100}
-            className="max-sm:w-40"
-          />
+            <Image
+              src={Logo}
+              alt="mhc logo"
+              width={200}
+              height={100}
+              className="max-sm:w-40"
+            />
           </a>
           <button
             className="bg-white py-0 px-0 hover:bg-white hidden max-sm:block"
@@ -52,7 +52,6 @@ export default function Navbar() {
             <ul className="flex flex-col p-2 font-bold mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-6 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white uppercase text-sm">
               <Link
                 to="Home"
-                
                 duration={500}
                 smooth={true}
                 className="text-blue-700 p-2 text-sm font-bold hover:bg-gray-300 duration-300 rounded cursor-pointer"
