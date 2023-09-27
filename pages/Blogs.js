@@ -18,12 +18,12 @@ const Blogs = () => {
         <h1 className="text-4xl uppercase font-semibold partnertxt">Blogs</h1>
         <div className="w-40 h-1 bg-gray-500 rounded-full mt-2"></div>
       </div>
-      <div className="grid grid-cols-2 gap-10 items-start">
+      <div className="grid lg:grid-cols-2 gap-10 items-start">
         {/* left big blog card */}
         <div>
           <article className="overflow-hidden  shadow transition hover:shadow-lg ">
             <Image
-              className="w-full h-[360px] object-cover"
+              className="w-full md:h-[360px] object-cover"
               src={blogs?.reverse()[0]?.image}
               width={500}
               height={300}
@@ -46,10 +46,10 @@ const Blogs = () => {
           </article>
         </div>
         {/* right blogs */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-10 lg:gap-6">
           {blogs?.slice(1, 4)?.map((blog) => (
             <div>
-              <div className="flex gap-5 items-start">
+              <div className="md:flex gap-5 items-start">
                 <Image
                   className="h-[150px] object-cover"
                   src={blog?.image}
