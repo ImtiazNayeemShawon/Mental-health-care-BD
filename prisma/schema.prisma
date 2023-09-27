@@ -22,6 +22,8 @@ model events {
   status           String   @default("upcoming")
   Intersted        Int      @default(0)
   image            String
+  address          String
+  date             String
   createAt         DateTime @default(now())
 }
 
