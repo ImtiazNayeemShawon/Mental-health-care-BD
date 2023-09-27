@@ -44,6 +44,12 @@ const Sidebar = () => {
                 Add Post
               </li>
             </Link>
+            <Link href={"/dashboard/addevents"}>
+              <li className="p-5">
+                <FaImages className="inline-block mr-2" />
+                Add Events
+              </li>
+            </Link>
             <Link href={"/dashboard/members"}>
               <li className=" p-5">
                 <FaUsers className="inline-block mr-2" />

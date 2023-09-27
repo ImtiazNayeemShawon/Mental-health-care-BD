@@ -1,11 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: false,
-  // distDir: "build",
-  pageExtensions: ["mdx", "md", "jsx", "js", "tsx", "ts"],
+module.exports = {
   images: {
-    domains: ["i.ibb.co"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*",
+      },
+    ],
   },
 };
-
-module.exports = nextConfig;
