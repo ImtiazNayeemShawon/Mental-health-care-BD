@@ -22,13 +22,15 @@ const Blogs = () => {
         {/* left big blog card */}
         <div>
           <article className="overflow-hidden  shadow transition hover:shadow-lg ">
-            <Image
-              className="w-full md:h-[360px] object-cover"
-              src={blogs?.reverse()[0]?.image}
-              width={500}
-              height={300}
-              alt="img"
-            />
+            <div className="relative">
+              <Image
+                className="w-full md:h-[360px] object-cover hover:scale-105 ease-in-out  duration-300 overflow-hidden"
+                src={blogs?.reverse()[0]?.image}
+                width={500}
+                height={300}
+                alt="img"
+              ></Image>
+            </div>
 
             <div className="line text-white p-4 sm:p-6">
               <div className="py-5">
@@ -37,7 +39,7 @@ const Blogs = () => {
                 </p>
 
                 <Link href="#">
-                  <h3 className="text-2xl font-bold mt-3 ">
+                  <h3 className="text-2xl font-bold mt-3 hover:text-black duration-300">
                     {blogs?.reverse()[0]?.title}
                   </h3>
                 </Link>
@@ -51,7 +53,7 @@ const Blogs = () => {
             <div>
               <div className="md:flex gap-5 items-start">
                 <Image
-                  className="h-[150px] object-cover"
+                  className="h-[150px] object-cover hover:scale-105 ease-in-out  duration-300 overflow-hidden"
                   src={blog?.image}
                   width={300}
                   height={150}
