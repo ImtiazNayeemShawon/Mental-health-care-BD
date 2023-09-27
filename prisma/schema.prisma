@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -9,9 +8,34 @@ datasource db {
 }
 
 model post {
-  id       String    @id @default(auto()) @map("_id") @db.ObjectId
-  title    String
-  description     String
-  image String
-  createAt DateTime @default(now())
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  image       String
+  createAt    DateTime @default(now())
+}
+
+model events {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  title            String
+  shortDescription String
+  status           String   @default("upcoming")
+  Intersted        Int      @default(0)
+  image            String
+  address          String
+  date             String
+  createAt         DateTime @default(now())
+}
+
+model applications {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  email            String
+  phone            String   @unique
+  pastOrgExperince String
+  class            String
+  school           String
+  skill            String
+  whyInterested    String
+  createAt         DateTime @default(now())
 }
