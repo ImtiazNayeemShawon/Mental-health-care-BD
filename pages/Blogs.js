@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Blogs = () => {
+  const API_URL = process.env.NEXT_PUBLIC_API;
+
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/")
+    fetch(API_URL)
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
