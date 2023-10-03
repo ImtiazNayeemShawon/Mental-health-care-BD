@@ -3,7 +3,7 @@ import HomePage from "./HomePage";
 import Footer from "./Footer";
 import Feature from "./Feature";
 import WhatWeDo from "./whatWeDo";
-import Gallery from "./Gallery";
+import Gallery from "./gallery";
 import BecomeVolunteer from "./becomeVolunteer";
 import OurEvenets from "./OurEvenets";
 import Blogs from "./Blogs";
