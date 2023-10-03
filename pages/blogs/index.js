@@ -4,7 +4,7 @@ import BlogsCard from "./BlogsCard";
 const index = () => {
   const API_URL = process.env.NEXT_PUBLIC_API;
 
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState([])
 
   useEffect(() => {
     fetch(API_URL)
