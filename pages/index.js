@@ -6,7 +6,7 @@ import WhatWeDo from "./whatWeDo";
 import Gallery from "./gallery";
 import BecomeVolunteer from "./becomeVolunteer";
 import OurEvenets from "./OurEvenets";
-import Blogs from "./Blogs";
+import Blogs from "./blogs/app";
 
 export default function Home() {
   return (
