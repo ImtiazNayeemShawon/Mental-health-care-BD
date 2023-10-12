@@ -29,7 +29,9 @@ const OurEventsCard = ({ event }) => {
               {event?.address}
             </p>
           </div>
-          <article className="mainfont mt-2">{event?.shortDescription}</article>
+          <article className="mainfont mt-2">
+            {event?.shortDescription.slice(0, 60)}...
+          </article>
           <div className="flex justify-between">
             <button className="capitalize flex gap-1 items-center bg-blue-400 text-white px-3 py-1 rounded-sm mt-5 ">
               interested{" "}

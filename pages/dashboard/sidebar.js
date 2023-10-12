@@ -12,10 +12,12 @@ import {
 const Sidebar = () => {
   return (
     <div>
-      <div className="h-screen bg-white text-black w-1/6 fixed">
+      <div className="h-screen bg-white text-black lg:w-1/6 w-screen lg:fixed">
         <div className="justify-start p-5">
           <h3 className="text-3xl font-bold  border-b py-5 text-center">
-            <Image src={logo} alt="logo"></Image>
+            <Link href={"/"}>
+              <Image src={logo} alt="logo"></Image>
+            </Link>
           </h3>
         </div>
         <div>
@@ -38,16 +40,16 @@ const Sidebar = () => {
                 Our Gallery
               </li>
             </Link>{" "}
-            <Link href={"/dashboard/addpost"}>
+            <Link href={"/dashboard/blogs"}>
               <li className="p-5">
                 <FaImages className="inline-block mr-2" />
-                Add Post
+                Blogs
               </li>
             </Link>
-            <Link href={"/dashboard/addevents"}>
+            <Link href={"/dashboard/events"}>
               <li className="p-5">
                 <FaImages className="inline-block mr-2" />
-                Add Events
+                Events
               </li>
             </Link>
             <Link href={"/dashboard/members"}>

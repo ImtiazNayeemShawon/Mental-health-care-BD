@@ -3,10 +3,10 @@ import HomePage from "./HomePage";
 import Footer from "./Footer";
 import Feature from "./Feature";
 import WhatWeDo from "./whatWeDo";
-import Gallery from "./OurGallery"
 import BecomeVolunteer from "./becomeVolunteer";
 import OurEvenets from "./OurEvenets";
-import Blogs from "./blogs/app";
+import HomeBlogs from "./HomeBlogs";
+import OurGallery from "./OurGallery";
 
 export default function Home() {
   return (
@@ -22,9 +22,9 @@ export default function Home() {
         <HomePage />
         <Feature />
         <WhatWeDo />
-        <Gallery />
+        <OurGallery />
         <OurEvenets />
-        <Blogs />
+        <HomeBlogs />
         <BecomeVolunteer />
         <Footer />
       </main>
