@@ -9,7 +9,7 @@ const index = () => {
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
-  console.log(blogs);
+
   return (
     <div className="mt-24 mx-16">
       <h2>blogs: {blogs?.length}</h2>

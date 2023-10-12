@@ -12,7 +12,7 @@ const BlogDetails = () => {
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, []);
-  console.log(blog);
+
   return (
     <div className="mt-24">
       single blog
