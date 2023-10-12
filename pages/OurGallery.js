@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import News from "../public/news.png";
 
-export default function Gallery() {
+export default function OurGallery() {
   return (
     <div className="mt-20">
       <div>
