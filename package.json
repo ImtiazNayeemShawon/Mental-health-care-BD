@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,6 +17,10 @@
     "env": "^0.0.2",
     "express": "^4.18.2",
     "nodemon": "^3.0.1"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
     "prisma": "^5.3.1"
