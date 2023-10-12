@@ -6,7 +6,6 @@ import { FaTimes } from "react-icons/fa";
 const AddEvent = ({ isOpen, setIsOpen }) => {
   const [loading, setLoading] = useState(false);
   const CLOUDINARY_API = process.env.NEXT_PUBLIC_CLOUDINARY_API;
-  const API_URL = process.env.NEXT_PUBLIC_API;
 
   const handleSUbmit = async (e) => {
     e.preventDefault();
@@ -36,7 +35,7 @@ const AddEvent = ({ isOpen, setIsOpen }) => {
 
           // save data to databse
           try {
-            fetch(`${API_URL}/events`, {
+            fetch(`https://mental-health-care-bd.onrender.com/events`, {
               method: "POST",
               headers: { "content-type": "application/json" },
               body: JSON.stringify(event),

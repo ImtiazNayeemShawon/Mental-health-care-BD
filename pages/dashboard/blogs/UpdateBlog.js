@@ -6,7 +6,7 @@ const UpdateBlog = ({ isUpdateOpen, setUpdateOpen, id }) => {
   const [blog, setBlog] = useState({});
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API}/blog/${id}`)
+    fetch(`https://mental-health-care-bd.onrender.com/blog/${id}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, []);
@@ -46,7 +46,7 @@ const UpdateBlog = ({ isUpdateOpen, setUpdateOpen, id }) => {
 
     // save data to databse
     try {
-      fetch(`${process.env.NEXT_PUBLIC_API}/blog`, {
+      fetch(`https://mental-health-care-bd.onrender.com/blog`, {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(post),

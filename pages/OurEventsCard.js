@@ -4,7 +4,6 @@ import Link from "next/link";
 import { FaMapMarkerAlt, FaRegClock } from "react-icons/fa";
 
 const OurEventsCard = ({ event }) => {
-  console.log(event);
   return (
     <div>
       <div className="bg-[#c9f6b4] rounded-lg w-full">

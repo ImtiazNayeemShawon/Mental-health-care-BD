@@ -5,10 +5,11 @@ import React, { useEffect, useState } from "react";
 const BlogDetails = () => {
   const [blog, setBlog] = useState({});
   const router = useRouter();
-  console.log(router.query.blogid);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API}/blog/${router.query.blogid}`)
+    fetch(
+      `https://mental-health-care-bd.onrender.com/blog/${router.query.blogid}`
+    )
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, []);

@@ -32,7 +32,7 @@ const AddBlog = ({ isOpen, setIsOpen }) => {
 
           // save data to databse
           try {
-            fetch(`${process.env.NEXT_PUBLIC_API}/blog`, {
+            fetch(`https://mental-health-care-bd.onrender.com/blog`, {
               method: "POST",
               headers: { "content-type": "application/json" },
               body: JSON.stringify(post),
