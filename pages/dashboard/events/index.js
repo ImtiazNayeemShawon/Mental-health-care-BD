@@ -1,32 +1,32 @@
 import { useEffect, useState } from "react";
-import Sidebar from "../sidebar";
-
 import { FaEdit, FaPlusCircle, FaTrashAlt } from "react-icons/fa";
 import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
-import AddBlog from "./AddBlog";
-import UpdateBlog from "./UpdateBlog";
+import AddEvent from "./AddEvent";
+import Sidebar from "../sidebar";
+import UpdateEvent from "./UpdateEvent";
 
-const blogs = () => {
+const events = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isUpdateOpen, setUpdateOpen] = useState(false);
   const [id, setId] = useState(null);
-  const [blogs, setBlogs] = useState([]);
+  const [events, setEvents] = useState([]);
 
+  // get events data
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
+    fetch(`${process.env.NEXT_PUBLIC_API}/events`)
       .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, [blogs]);
+      .then((data) => setEvents(data));
+  }, [events]);
 
-  // handle delete blog
+  // handle delete event
   const handleDeleteBlog = async (id) => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog/${id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/events/${id}`, {
         method: "DELETE",
       });
       if (res.ok) {
-        toast.success("Blog Deleted successfully");
+        toast.success("Event Deleted successfully");
       }
       console.log(res.ok);
     } catch (error) {
@@ -43,37 +43,37 @@ const blogs = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <FaPlusCircle className="text-xl" />
-          Add Blog
+          Add Event
         </button>
       </div>
-      {/* all blogs */}
+      {/* all events */}
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5">
-          {blogs.reverse()?.map((blog) => (
-            <div className="bg-white p-3 rounded-lg shadow-xl " key={blog?.id}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+          {events.reverse()?.map((event) => (
+            <div className="bg-white p-3 rounded-lg shadow-xl" key={event?.id}>
               <Image
                 className="w-full object-cover h-[170px] object-top"
-                src={blog?.image}
+                src={event?.image}
                 width={200}
                 height={200}
                 alt="img"
               ></Image>
-              <h3 className="text-base py-5 text-gray-800">{blog?.title}</h3>
+              <h3 className="text-base py-5 text-gray-800">{event?.title}</h3>
 
               <div className="text-2xl flex justify-between items-center pb-2">
+                {" "}
                 <button
                   onClick={() => {
                     setUpdateOpen(!isUpdateOpen);
-                    setId(blog?.id);
+                    setId(event?.id);
                   }}
                   className="hover:text-blue-600 duration-200"
                 >
                   <FaEdit></FaEdit>
                 </button>
-
                 <button
                   className="hover:text-red-500 duration-200"
-                  onClick={() => handleDeleteBlog(blog?.id)}
+                  onClick={() => handleDeleteBlog(event?.id)}
                 >
                   <FaTrashAlt></FaTrashAlt>
                 </button>
@@ -85,22 +85,22 @@ const blogs = () => {
 
       {/* Update Modal */}
       {isUpdateOpen && (
-        <UpdateBlog
+        <UpdateEvent
           isUpdateOpen={isUpdateOpen}
           setUpdateOpen={setUpdateOpen}
           id={id}
-        ></UpdateBlog>
+        ></UpdateEvent>
       )}
 
       {/* Add Modal */}
-      {isOpen && <AddBlog isOpen={isOpen} setIsOpen={setIsOpen}></AddBlog>}
+      {isOpen && <AddEvent isOpen={isOpen} setIsOpen={setIsOpen}></AddEvent>}
     </div>
   );
 };
 
-export default blogs;
+export default events;
 
-blogs.getLayout = function getLayout(page) {
+events.getLayout = function getLayout(page) {
   return (
     <div className="lg:flex gap-5">
       <aside className="w-1/6">

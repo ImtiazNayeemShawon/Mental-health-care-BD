@@ -11,10 +11,8 @@ const UpdateBlog = ({ isUpdateOpen, setUpdateOpen, id }) => {
       .then((data) => setBlog(data));
   }, []);
 
-  console.log(blog);
-
   const [loading, setLoading] = useState(false);
-  const CLOUDINARY_API = process.env.NEXT_PUBLIC_CLOUDINARY_API;
+  // const CLOUDINARY_API = process.env.NEXT_PUBLIC_CLOUDINARY_API;
 
   const handleSUbmit = async (e) => {
     e.preventDefault();
