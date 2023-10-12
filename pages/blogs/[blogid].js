@@ -3,14 +3,12 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
 const BlogDetails = () => {
-  const API_URL = process.env.NEXT_PUBLIC_API;
-
   const [blog, setBlog] = useState({});
   const router = useRouter();
   console.log(router.query.blogid);
 
   useEffect(() => {
-    fetch(`${API_URL}/post/${router.query.blogid}`)
+    fetch(`${process.env.NEXT_PUBLIC_API}/blog/${router.query.blogid}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, []);

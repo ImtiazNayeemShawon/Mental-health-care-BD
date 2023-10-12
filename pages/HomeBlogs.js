@@ -3,13 +3,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Blogs = () => {
-  const API_URL = process.env.NEXT_PUBLIC_API;
-
+const HomeBlogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch(API_URL)
+    fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
@@ -81,4 +79,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default HomeBlogs;

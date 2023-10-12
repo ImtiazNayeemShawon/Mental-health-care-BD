@@ -4,7 +4,6 @@ import toast from "react-hot-toast";
 const AddPost = () => {
   const [loading, setLoading] = useState(false);
   const CLOUDINARY_API = process.env.NEXT_PUBLIC_CLOUDINARY_API;
-  const API = process.env.NEXT_PUBLIC_API;
 
   const handleSUbmit = async (e) => {
     e.preventDefault();
@@ -32,7 +31,7 @@ const AddPost = () => {
 
           // save data to databse
           try {
-            fetch(API, {
+            fetch(`${process.env.NEXT_PUBLIC_API}/blog`, {
               method: "POST",
               headers: { "content-type": "application/json" },
               body: JSON.stringify(post),

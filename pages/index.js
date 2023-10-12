@@ -6,7 +6,7 @@ import WhatWeDo from "./whatWeDo";
 import Gallery from "./Gallery";
 import BecomeVolunteer from "./becomeVolunteer";
 import OurEvenets from "./OurEvenets";
-import Blogs from "./Blogs";
+import HomeBlogs from "./HomeBlogs";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
         <WhatWeDo />
         <Gallery />
         <OurEvenets />
-        <Blogs />
+        <HomeBlogs />
         <BecomeVolunteer />
         <Footer />
       </main>
