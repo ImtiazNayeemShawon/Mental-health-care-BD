@@ -14,7 +14,7 @@ const events = () => {
 
   // get events data
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API}/events`)
+    fetch(`https://mental-health-care-bd.onrender.com/events`)
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, [events]);
@@ -22,13 +22,15 @@ const events = () => {
   // handle delete event
   const handleDeleteBlog = async (id) => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/events/${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `https://mental-health-care-bd.onrender.com/events/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (res.ok) {
         toast.success("Event Deleted successfully");
       }
-      console.log(res.ok);
     } catch (error) {
       console.log(error);
     }

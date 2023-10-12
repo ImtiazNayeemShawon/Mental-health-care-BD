@@ -5,7 +5,7 @@ const index = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
+    fetch(`https://mental-health-care-bd.onrender.com/blog`)
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);

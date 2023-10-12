@@ -10,16 +10,14 @@ import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 
 export default function OurEvenets() {
-  const API_URL = process.env.NEXT_PUBLIC_API;
-
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch(`${API_URL}/events`)
+    fetch(`https://mental-health-care-bd.onrender.com/events`)
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);
-  console.log(events);
+
   return (
     <div className="mt-20" id="Events">
       <div>

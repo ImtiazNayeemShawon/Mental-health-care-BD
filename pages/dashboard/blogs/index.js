@@ -14,7 +14,7 @@ const blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API}/blog`)
+    fetch(`https://mental-health-care-bd.onrender.com/blog`)
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, [blogs]);
@@ -22,13 +22,15 @@ const blogs = () => {
   // handle delete blog
   const handleDeleteBlog = async (id) => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blog/${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `https://mental-health-care-bd.onrender.com/blog/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (res.ok) {
         toast.success("Blog Deleted successfully");
       }
-      console.log(res.ok);
     } catch (error) {
       console.log(error);
     }

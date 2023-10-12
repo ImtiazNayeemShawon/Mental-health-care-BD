@@ -7,7 +7,7 @@ const UpdateEvent = ({ isUpdateOpen, setUpdateOpen, id }) => {
   const [event, setEvent] = useState({});
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API}/events/${id}`)
+    fetch(`https://mental-health-care-bd.onrender.com/events/${id}`)
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, []);
@@ -51,7 +51,7 @@ const UpdateEvent = ({ isUpdateOpen, setUpdateOpen, id }) => {
 
     // save data to databse
     try {
-      fetch(`${process.env.NEXT_PUBLIC_API}/events`, {
+      fetch(`https://mental-health-care-bd.onrender.com/events`, {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(event),
