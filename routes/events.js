@@ -41,6 +41,8 @@ router.put("/events", async (req, res) => {
         title: UpdatedData?.title,
         shortDescription: UpdatedData?.shortDescription,
         image: UpdatedData?.image,
+        address: UpdatedData?.address,
+        date: UpdatedData?.date,
       },
     });
     res.send(updatepost);
