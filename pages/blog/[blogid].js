@@ -13,7 +13,7 @@ const BlogDetails = () => {
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, []);
-  console.log(blog);
+
   return (
     <div className="mt-24 mx-20 max-sm:mx-4 block">
       <div className="float-left md:mr-5 mb-2">
