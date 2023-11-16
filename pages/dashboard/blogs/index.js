@@ -59,9 +59,8 @@ const blogs = () => {
                 width={200}
                 height={200}
                 alt="img"
-              ></Image>
+              ></Image>{" "}
               <h3 className="text-base py-5 text-gray-800">{blog?.title}</h3>
-
               <div className="text-2xl flex justify-between items-center pb-2">
                 <button
                   onClick={() => {

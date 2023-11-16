@@ -20,7 +20,7 @@ const HomeBlogs = () => {
       </div>
       <div className="grid lg:grid-cols-2 gap-10 items-start">
         {/* left big blog card */}
-        <div>
+        <Link href={`/blog/${blogs[blogs.length - 1]?.id}`}>
           <article className="overflow-hidden  shadow transition hover:shadow-lg ">
             <div className="relative">
               <Image
@@ -38,16 +38,15 @@ const HomeBlogs = () => {
                   {new Date(blogs?.reverse()[0]?.createAt).toDateString()}
                 </p>
 
-                <Link href="#">
-                  <h3 className="text-2xl font-bold mt-3 hover:text-black duration-300">
-                    {blogs?.reverse()[0]?.title}
-                  </h3>
-                </Link>
+                <h3 className="text-2xl font-bold mt-3 hover:text-black duration-300">
+                  {blogs?.reverse()[0]?.title}
+                </h3>
               </div>
             </div>
           </article>
-        </div>
+        </Link>
         {/* right blogs */}
+
         <div className="flex flex-col gap-10 lg:gap-6">
           {blogs?.slice(1, 4)?.map((blog) => (
             <div>
@@ -64,7 +63,7 @@ const HomeBlogs = () => {
                     {new Date(blog?.createAt).toDateString()}
                   </p>
 
-                  <Link href="#">
+                  <Link href={`/blog/${blog?.id}`}>
                     <h3 className="text-xl font-bold mt-3 text-gray-900">
                       {blog?.title}
                     </h3>
