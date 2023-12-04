@@ -16,9 +16,9 @@ const BlogDetails = () => {
 
   return (
     <div className="mt-24 mx-20 max-sm:mx-4 block">
-      <div className="float-left md:mr-5 mb-2">
+      <div className=" md:mr-5 mb-2">
         <Image
-          className="md:w-[500px] md:h-[400px] object-cover object-center"
+          className="w-full h-[400px] "
           src={blog?.image}
           width={500}
           height={500}
@@ -31,7 +31,7 @@ const BlogDetails = () => {
       </div>
       <div className=" space-y-3">
         <h3 className="text-2xl font-bold">{blog?.title}</h3>
-        <article className="text-base text-gray-700">
+        <article className="text- font-medium leading-8 text-gray-700">
           {blog?.description}
         </article>
       </div>

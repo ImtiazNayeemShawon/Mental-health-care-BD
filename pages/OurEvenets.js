@@ -25,10 +25,10 @@ export default function OurEvenets() {
           Our events
         </h1>
         <h2 className="text-center text-4xl px-40 mt-2 partnertxt text-gray-800 capitalize max-sm:px-2 max-sm:text-xl">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+          Check our latest events for mental health awareness
         </h2>
       </div>
-      <div className="mt-10 overflow-hidden">
+      <div className="mt-10">
         <Swiper
           // style={{
           //   "--swiper-navigation-margin": "#fff",
@@ -58,7 +58,7 @@ export default function OurEvenets() {
             },
           }}
           modules={[Navigation, Autoplay, Pagination]}
-          className="mySwiper md:h-[500px] h-[520px]"
+          className="mySwiper md:h-[500px] h-[520px] "
         >
           {events?.reverse()?.map((event) => (
             <SwiperSlide key={event.id}>

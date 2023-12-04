@@ -10,18 +10,18 @@ import Partner from "../public/partner.png";
 export default function WhatWeDo() {
   return (
     <div>
-      <div className="mt-20">
+      <div id="ourworks" className="mt-20">
         <h1 className="uppercase font-semibold mainfont text-lg text-center text-yellow-500">
           what we do
         </h1>
-        <p className="text-center text-4xl px-40 mt-2 partnertxt text-gray-800 capitalize max-sm:px-2 max-sm:text-xl">
+        <p className="text-center text-3xl px-40 mt-2 partnertxt text-gray-800 capitalize font-semibold max-sm:px-2 max-sm:text-xl">
           We are on a Mission to Raise Mental Health Awareness
         </p>
         <div className="grid grid-cols-2 mt-20 gap-10 max-sm:grid-cols-1">
-          <Image src={News} className="rounded-2xl shadow-xl" />
+          <Image src={News} className="rounded-2xl " />
 
           <div>
-            <h1 className="text-4xl uppercase font-semibold partnertxt">
+            <h1 className="text-4xl capitalize font-semibold partnertxt">
               this is Headline
             </h1>
             <div className="w-40 h-1 bg-gray-500 rounded-full mt-2"></div>
@@ -41,7 +41,7 @@ export default function WhatWeDo() {
         </div>
         <div className="grid grid-cols-2 mt-20 gap-10 max-sm:grid-cols-1">
           <div>
-            <h1 className="text-4xl uppercase font-semibold partnertxt">
+            <h1 className="text-4xl capitalize font-semibold partnertxt">
               this is Headline
             </h1>
             <div className="w-40 h-1 bg-gray-500 rounded-full mt-2"></div>
@@ -58,42 +58,42 @@ export default function WhatWeDo() {
               Lorem Ipsum.
             </p>
           </div>
-          <Image src={Group} className="rounded-2xl shadow-xl h-96" />
+          <Image src={Group} className="rounded-2xl  h-96" />
         </div>
         <div className="bg-gray-200  partnertxt rounded-lg mt-20 shadow-sm grid grid-cols-4 place-items-center max-sm:grid-cols-1">
           <div className="m-2 p-2">
-            <Image src={Volunteer} width={120} className="m-auto block" />
-            <h1 className="text-center text-blue-600 text-4xl font-medium partnertxt">
+            <Image src={Volunteer} width={120} className="m-auto block w-20 h-20" />
+            <h1 className="text-center text-blue-600 text-xl font-medium partnertxt">
               100+
             </h1>
-            <p className="text-center partnertxt text-2xl uppercase font-semibold">
+            <p className="text-center partnertxt text-xl  font-semibold">
               Volunteer
             </p>
           </div>
           <div className="m-2 p-2">
-            <Image src={Project} width={120} className="m-auto block" />
-            <h1 className="text-center text-blue-600 text-4xl font-medium partnertxt">
+            <Image src={Project} width={120} className="m-auto block w-20 h-20" />
+            <h1 className="text-center text-blue-600 text-xl font-medium partnertxt">
               300+
             </h1>
-            <p className="text-center partnertxt text-2xl uppercase font-semibold">
+            <p className="text-center partnertxt text-xl  font-semibold">
               Awareness programm
             </p>
           </div>
           <div className="m-2 p-2">
-            <Image src={Projects} width={120} className="m-auto block" />
-            <h1 className="text-center text-blue-600 text-4xl font-medium partnertxt">
+            <Image src={Projects} width={120} className="m-auto block w-20 h-20" />
+            <h1 className="text-center text-blue-600 text-xl font-medium partnertxt">
               300+
             </h1>
-            <p className="text-center partnertxt text-2xl uppercase font-semibold">
+            <p className="text-center partnertxt text-2xl  font-semibold">
               Awareness projects
             </p>
           </div>
           <div className="m-2 p-2">
-            <Image src={Partner} width={120} className="m-auto block" />
-            <h1 className="text-center text-blue-600 text-4xl font-medium partnertxt">
+            <Image src={Partner} width={120} className="m-auto block w-20 h-20" />
+            <h1 className="text-center text-blue-600 text-xl font-medium partnertxt">
               30+
             </h1>
-            <p className="text-center partnertxt text-2xl uppercase font-semibold">
+            <p className="text-center partnertxt text-2xl  font-semibold">
               Partner company
             </p>
           </div>

@@ -9,7 +9,7 @@ export default function Feature() {
         <p className="uppercase font-semibold mainfont text-lg text-center text-yellow-500">
           Our feature
         </p>
-        <h2 className="text-center text-4xl px-40 mt-2 partnertxt text-gray-800 capitalize max-sm:px-2 max-sm:text-xl">
+        <h2 className="text-center text-3xl px-40 mt-2 partnertxt text-gray-800 capitalize font-semibold max-sm:px-2 max-sm:text-xl">
           Whatever it is that you care about, there will be a charity working on
           it . Charitis help is lots of different ways
         </h2>
