@@ -40,9 +40,7 @@ export default function OurEvenets() {
           }}
           slidesPerView={1}
           spaceBetween={10}
-          pagination={{
-            clickable: true,
-          }}
+         
           breakpoints={{
             640: {
               slidesPerView: 1,

@@ -4,7 +4,7 @@ import Logo from "../public/frontlogo.png";
 
 export default function HomePage() {
   return (
-    <div id="Home" className="m-0 bg pb-40">
+    <div id="Home" className="m-0 bg pb-40 ">
       <div className=" ">
         <div className="grid grid-cols-2  mt-10 justify-between max-sm:grid-cols-1">
           <div>
@@ -24,13 +24,11 @@ export default function HomePage() {
               stigma around mental health issues, and to encourage those who are
               suffering to seek help and find a support network through us.
             </p>
-            <div className="max-sm:justify-between max-sm:block">
-              <button className="line px-10 py-3 rounded-2xl text-gray-50 font-bold mt-10 hover:bg-white duration-200 hover:text-gray-500 max-sm:w-60 ">
-                Donate
+            <div className=" gap-20 flex max-sm:gap-4">
+              <button className="line px-10 py-2 rounded-sm text-gray-50 font-bold mt-10 hover:bg-white hover:border-gray-200 border duration-200 hover:text-gray-500 max-sm:w-60 ">
+                Donate now
               </button>
-              <button className=" px-10 py-3 rounded-2xl text-gray-500 shadow-sm bg-white ml-20 font-bold mt-10  hover:bg-gray-500 duration-200 hover:text-white max-sm:ml-0 max-sm:mt-2 max-sm:w-60 ">
-                About us
-              </button>
+              
             </div>
           </div>
         </div>
