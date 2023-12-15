@@ -12,7 +12,7 @@ const BlogDetails = () => {
     )
       .then((res) => res.json())
       .then((data) => setBlog(data));
-  }, []);
+  }, [router]);
 
   return (
     <div className="mt-24 mx-20 max-sm:mx-4 block">

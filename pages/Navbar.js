@@ -92,7 +92,7 @@ export default function Navbar() {
                 Contact us
               </Link>
               <Link
-                href="/toiHomey"
+                to="/toiHomey"
                 className="text-gray-100 p-2 font-bold bg-blue-700 duration-300 rounded cursor-pointer"
               >
                 Join Our Family
