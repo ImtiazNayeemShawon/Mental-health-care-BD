@@ -57,6 +57,7 @@ const UpdateBlog = ({ isUpdateOpen, setUpdateOpen, id }) => {
             e.target.reset();
             setLoading(false);
             toast.success("Blog Updated");
+            setUpdateOpen(!isUpdateOpen);
           }
         });
     } catch (error) {
