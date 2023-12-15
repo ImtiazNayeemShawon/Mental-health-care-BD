@@ -29,6 +29,7 @@ const UpdateBlog = ({ isUpdateOpen, setUpdateOpen, id }) => {
     };
 
     setLoading(true);
+
     // upload image to cloudinary
     // try {
     // fetch(CLOUDINARY_API, {
