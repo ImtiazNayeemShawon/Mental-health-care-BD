@@ -9,9 +9,9 @@ export default function Feature() {
         <p className="uppercase font-semibold mainfont text-lg text-center text-yellow-500">
           Our feature
         </p>
-        <h2 className="text-center text-4xl px-40 mt-2 partnertxt text-gray-800 capitalize max-sm:px-2 max-sm:text-xl">
+        <h2 className="text-center text-xl px-40 mt-2 partnertxt text-gray-800 capitalize font-bold max-sm:px-2 max-sm:text-xl">
           Whatever it is that you care about, there will be a charity working on
-          it . Charitis help is lots of different ways
+          it . 
         </h2>
       </div>
       <div className="grid grid-cols-2 mx-40 mt-20 gap-10 max-sm:grid-cols-1 max-sm:gap-2 max-sm:mx-2">

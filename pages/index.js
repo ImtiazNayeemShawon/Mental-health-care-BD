@@ -3,7 +3,6 @@ import HomePage from "./HomePage";
 import Footer from "./Footer";
 import Feature from "./Feature";
 import WhatWeDo from "./whatWeDo";
-import BecomeVolunteer from "./becomeVolunteer";
 import OurEvenets from "./OurEvenets";
 import HomeBlogs from "./HomeBlogs";
 import OurGallery from "./OurGallery";
@@ -25,7 +24,6 @@ export default function Home() {
         <OurGallery />
         <OurEvenets />
         <HomeBlogs />
-        <BecomeVolunteer />
         <Footer />
       </main>
     </>

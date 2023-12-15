@@ -21,7 +21,7 @@ export default function Navbar() {
               alt="mhc logo"
               width={200}
               height={100}
-              className="max-sm:w-40"
+              className="max-sm:w-40 w-40 "
             />
           </a>
           <button

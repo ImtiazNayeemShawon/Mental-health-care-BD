@@ -1,32 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap");
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   background-color: rgb(211, 243, 243);
 }
 
 .intro {
   color: #20419a;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 .head {
   color: #20419a;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 .details {
   color: #2e917a;
 }
 .line {
   background-color: #2e917a;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 .p-2 {
   font-size: 14px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .partnertxt {
-  font-family: "Darker Grotesque", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
